@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <style>
+    @font-face {
+      font-family: 'Burgundia';
+      src: url('/assets/fonts/Burgundia_PERSONAL_USE_ONLY.otf') format('opentype');
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #001d1a;
+      color: white;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    a {
+      color: #3399ff;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-right: 20px;
+      font-weight: bold;
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      font-family: 'Burgundia', sans-serif;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.8em;
+      text-align: center;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">BESTARI</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/blog/">Blog</a>
+      <a href="/projects/">Projects</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <hr>
+    Subscribe via e-mail or just say hello  
+    <br>Powered by GitHub
+  </footer>
+</body>
+</html>
+
