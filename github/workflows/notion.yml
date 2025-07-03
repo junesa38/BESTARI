@@ -1,0 +1,17 @@
+name: Sync Notion Blog to GitHub
+
+on:
+  schedule:
+    - cron: "*/30 * * * *" # cek setiap 30 menit
+  workflow_dispatch:
+
+jobs:
+  notion-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Notion to GitHub
+        uses: splitbee/notion-blog-to-markdown@main
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          DATABASE_ID: ${{ secrets.NOTION_DB_ID }}
