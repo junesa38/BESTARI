@@ -33,6 +33,13 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Collections (Tambahkan bagian ini)
+collections:
+  projects:
+    output: true # Ini penting agar Jekyll membuat file HTML untuk setiap proyek
+    permalink: /projects/:name/ # Struktur URL untuk setiap item proyek
+    
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
