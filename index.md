@@ -17,7 +17,8 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
 
 <ul>
   {% for post in site.posts limit:3 %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
+
 
