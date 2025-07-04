@@ -7,7 +7,7 @@
   <style>
     @font-face {
       font-family: 'Burgundia';
-      src: url('/assets/fonts/Burgundia_PERSONAL_USE_ONLY.otf') format('opentype');
+      src: url('{{ "/assets/fonts/Burgundia_PERSONAL_USE_ONLY.otf" | relative_url }}') format('opentype');
     }
 
     * {
@@ -32,12 +32,14 @@
     nav {
       margin-top: 10px;
       margin-bottom: 20px;
+      text-align: left; /* Kembali ke rata kiri */
     }
 
     nav a {
-      margin-right: 20px;
+      margin-right: 20px; /* Jarak antar tombol */
+      margin-left: 0;   /* Pastikan tidak ada margin kiri */
       font-weight: bold;
-      display: inline-block;
+      display: inline-block; /* Penting agar tetap sejajar */
     }
 
     .logo {
@@ -59,9 +61,15 @@
         font-size: 1.5em;
       }
 
+      nav {
+        text-align: left; /* Tetap rata kiri di mobile */
+        padding-left: 0; /* Pastikan tidak ada padding yang mengganggu */
+      }
       nav a {
-        display: block;
-        margin: 10px 0;
+        display: inline-block; /* Tetap sejajar di mobile */
+        margin-right: 15px; /* Jarak antar tombol di mobile */
+        margin-bottom: 5px; /* Jika tombol wrap ke bawah */
+        white-space: nowrap; /* Mencegah teks tombol terpotong */
       }
 
       body {
@@ -74,11 +82,10 @@
   <header>
     <div class="logo">BESTARI</div>
     <nav>
-  <a href="{{ "/" | relative_url }}">Home</a>
-  <a href="{{ "/blog/" | relative_url }}">Blog</a>
-  <a href="{{ "/projects/" | relative_url }}">Projects</a>
-</nav>
-
+      <a href="{{ "/" | relative_url }}">Home</a>
+      <a href="{{ "/blog/" | relative_url }}">Blog</a>
+      <a href="{{ "/projects/" | relative_url }}">Projects</a>
+    </nav>
     <hr>
   </header>
 
@@ -93,4 +100,3 @@
   </footer>
 </body>
 </html>
-
