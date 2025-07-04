@@ -15,7 +15,7 @@ Proyek ini dikembangkan dengan fokus pada akurasi dan kemudahan penggunaan,
 membantu mengurangi pemborosan material dan mempercepat proses perencanaan.
 
 {% if page.preview_link %}
-[**Lihat Preview Proyek (Gunakan Kalkulatornya!)**]({{ page.preview_link }})
+[**Lihat Preview Proyek (Gunakan Kalkulatornya!)**]({{ https://stackblitz.com/edit/sb1-raoatbev?embed=1&file=index.html&view=preview }})
 {% endif %}
 
 {% if page.source_code_link %}
