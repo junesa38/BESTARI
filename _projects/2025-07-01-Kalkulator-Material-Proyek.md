@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kalkulator Perhitungan Material Proyek"
+title: Kalkulator Perhitungan Material Proyek
 date: 2025-07-01
 ---
 
