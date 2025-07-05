@@ -7,7 +7,7 @@ permalink: /projects/
 ## All My Projects
 
 {% assign all_projects = site.projects | sort: "date" | reverse %}
-{% assign all_categories = "" | split: "," %} {# Inisialisasi array kosong untuk menampung semua kategori #}
+{% assign all_categories = "" | split: "," %} 
 
 {% for project in all_projects %}
 {% if project.categories %}
@@ -15,7 +15,7 @@ permalink: /projects/
 {% endif %}
 {% endfor %}
 
-{% assign unique_categories = all_categories | uniq | sort %} {# Ambil kategori unik dan urutkan #}
+{% assign unique_categories = all_categories | uniq | sort %} 
 
 {% if unique_categories.size > 0 %}
 {% for category in unique_categories %}
