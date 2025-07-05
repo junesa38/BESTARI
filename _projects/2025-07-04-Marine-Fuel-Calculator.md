@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Marine Fuel Calculator"
-date: 2025-07-04
+date: 2025-07-04 10:00:00 +0700
 ---
 
 Ini adalah aplikasi kalkulator BBM kapal yang saya buat untuk membantu menghitung kebutuhan bahan bakar secara akurat. Semua perhitungan didasarkan pada jenis mesin, beban kerja, kecepatan, dan jarak tempuh.
