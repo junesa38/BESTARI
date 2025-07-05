@@ -3,7 +3,7 @@ layout: post
 title: Hikmah, Petunjuk, gairah
 date: 2022-11-01
 ---
-Tahun 2022 adalah masa yang sulit dalam hidup saya. Tapi di balik semua keterpurukan itu, saya menemukan sesuatu yang lebih dalam petunjuk "**Clue**"yang mengarah pada jalan yang selama ini saya abaikan, munculnya kembali gairah yang pernah saya kubur dalam-dalam, dan perlahan mulai saya pahami bahwa semua ini membawa hikmah yang membentuk versi diri saya yang lebih utuh.
+Tahun 2022 adalah masa yang sulit dalam hidup saya. Tapi di balik semua keterpurukan itu, saya menemukan sesuatu yang lebih dalam petunjuk "**Clue**" yang mengarah pada jalan yang selama ini saya abaikan, munculnya kembali gairah yang pernah saya kubur dalam-dalam, dan perlahan mulai saya pahami bahwa semua ini membawa hikmah yang membentuk versi diri saya yang lebih utuh.
 
 Sebelum semuanya berubah, saya punya pekerjaan yang stabil. Penghasilan cukup tinggi, kehidupan berjalan dengan baik. Hingga pada suatu titik, saya terkena PHK. Sertifikat pelaut saya pun kedaluwarsa. Seolah semuanya runtuh sekaligus. Tamat sudah, pikir saya waktu itu.
 
