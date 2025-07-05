@@ -13,18 +13,19 @@ permalink: /projects/
 {% assign grouped_projects = all_projects | group_by: "categories" %}
 
 {% for group in grouped_projects %}
-{% assign category_array = group.name %}
-{% assign category_name = category_array | first %} {# Ambil elemen pertama dari array kategori #}
+  {% assign category_array = group.name %}
+  {% assign category_name = category_array | first %} {% comment %} Ambil elemen pertama dari array kategori {% endcomment %}
 
-{% if category_name %}
-<h3 style="font-size: 1.2em; margin-top: 2em; margin-bottom: 0.5em;">{{ category_name }}</h3>
-{% else %}
-<h3 style="font-size: 1.2em; margin-top: 2em; margin-bottom: 0.5em;">Uncategorized</h3> {# Untuk proyek tanpa kategori #}
-{% endif %}
-<ul>
-{% for project in group.items %}
-<li>{{ project.date | date: "%d %b, %Y" }} - <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
-</li>
-{% endfor %}
-</ul>
+  {% if category_name %}
+    <h3 style="font-size: 1.2em; margin-top: 2em; margin-bottom: 0.5em;">{{ category_name }}</h3>
+  {% else %}
+    <h3 style="font-size: 1.2em; margin-top: 2em; margin-bottom: 0.5em;">Uncategorized</h3> {% comment %} Untuk proyek tanpa kategori {% endcomment %}
+  {% endif %}
+  <ul>
+    {% for project in group.items %}
+      <li>
+        {{ project.date | date: "%d %b, %Y" }} - <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
