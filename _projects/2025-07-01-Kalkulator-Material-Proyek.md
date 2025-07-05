@@ -1,18 +1,30 @@
 ---
-layout: projects
+layout: default
 title: Kalkulator Perhitungan Material Proyek
-date: 2025-07-01
+date: 2025-07-01 10:00:00 +0700
+categories:
+  - Tools
+  - Konstruksi
+tags:
+  - kalkulator
+  - material
+  - proyek
+  - jalan
+
+preview_link: https://tiny-meerkat-d745b2.netlify.app/
+source_code_link:
 ---
 
-**Kalkulator Perhitungan Material**
+## Kalkulator "Beli Rumah vs. Sewa Rumah": Mana yang Lebih Untung?
 
-Proyek ini merupakan **aplikasi web interaktif** yang dirancang khusus untuk mempermudah perhitungan kebutuhan material dasar dalam berbagai jenis proyek jalan.  
-Dengan alat ini, Anda dapat dengan cepat mengestimasi volume material seperti **sirtu, pasir, kerikil, batu 1/2, batu 2/3, abu batu, dan lainnya.**
+Bingung menentukan antara membeli atau menyewa properti di Indonesia? Keputusan besar ini melibatkan banyak faktor finansial yang kompleks. Kalkulator interaktif kami hadir untuk membantu Anda memecah kerumitan tersebut, memberikan gambaran jelas mengenai total biaya jangka panjang dari kedua opsi tersebut, disesuaikan dengan kondisi pasar di Indonesia.
 
-👉 [**Coba Kalkulator Sekarang (Preview)**](https://endearing-quokka-cae801.netlify.app/)
+**Langsung coba kalkulator kami di sini: [Bandingkan Sekarang!](https://tiny-meerkat-d745b2.netlify.app/)**
 
-Selain itu, kalkulator ini juga dilengkapi dengan fitur **perhitungan biaya dan kebutuhan ritase mobilisasi** material, memberikan estimasi yang komprehensif untuk perencanaan logistik Anda.
+Dengan alat ini, Anda bisa memasukkan detail seperti harga properti, uang muka, suku bunga KPR, biaya PBB, hingga perkiraan kenaikan sewa tahunan. Lihat perbandingan biaya secara visual melalui grafik dan dapatkan rekomendasi finansial yang akan memandu keputusan properti Anda, baik untuk rumah impian atau hunian nyaman Anda.
 
-Alat ini sangat ideal bagi **kontraktor kecil, pekerja lapangan, maupun individu** yang memerlukan perkiraan cepat dan akurat untuk proyek mereka.
 
-Pengembangan proyek ini difokuskan pada **akurasi dan kemudahan penggunaan**, bertujuan untuk mengurangi pemborosan material sekaligus mempercepat proses perencanaan proyek jalan Anda.
+
+{% if page.source_code_link %}
+[Lihat Kode Sumber di GitHub]({{ page.source_code_link }})
+{% endif %}
