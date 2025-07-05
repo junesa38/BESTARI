@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Marine Fuel Calculator"
 date: 2025-07-04
 ---
