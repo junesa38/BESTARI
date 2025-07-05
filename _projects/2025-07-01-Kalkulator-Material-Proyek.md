@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: project
 title: Kalkulator Perhitungan Material Proyek
 date: 2025-07-01
 ---
