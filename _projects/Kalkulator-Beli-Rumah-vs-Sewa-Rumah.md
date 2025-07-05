@@ -3,9 +3,7 @@ layout: default
 title: Kalkulator Beli Rumah vs Sewa Rumah
 date: 2025-07-01 10:00:00 +0700
 categories:
-  - Tools
   - Finansial
-  - Properti
 tags:
   - kalkulator
   - rumah
