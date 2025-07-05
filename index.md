@@ -21,8 +21,6 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
   {% for item in sorted_recent_items limit:3 %}
     <li>
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
-      {% if item.collection == "posts" %} (Blog){% endif %}
-      {% if item.collection == "projects" %} (Project){% endif %}
     </li>
   {% endfor %}
 </ul>
