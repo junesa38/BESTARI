@@ -5,14 +5,13 @@ date: 2025-07-01 10:00:00 +0700
 categories:
   - Finansial
 tags:
-  - kalkulator
   - rumah
   - sewa
   - beli
   - investasi
 ---
 
-## Kalkulator "Beli Rumah vs. Sewa Rumah": Mana yang Lebih Untung?
+"Beli Rumah vs. Sewa Rumah": Mana yang Lebih Untung?
 
 Bingung memutuskan antara membeli atau menyewa properti di Indonesia? Keputusan besar ini melibatkan banyak faktor finansial yang kompleks. Kalkulator interaktif kami hadir untuk membantu Anda memecah kerumitan tersebut, memberikan gambaran jelas mengenai total biaya jangka panjang dari kedua opsi, disesuaikan dengan kondisi pasar di Indonesia.
 
