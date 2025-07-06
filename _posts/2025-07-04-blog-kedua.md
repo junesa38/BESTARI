@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The Sorrow of a Loser Doesn’t Deserve Sympathy"
 date: 2025-07-02
 ---
