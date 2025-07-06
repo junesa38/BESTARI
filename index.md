@@ -13,14 +13,13 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
 
 ---
 
-## Artikel Terbaru
+## My Most Recent Posts
 
 <ul>
-  {% for post in site.posts limit:5 %}
+  {% assign sorted_recent_items = site.posts | sort: "date" | reverse %}
+  {% for item in sorted_recent_items limit:3 %}
     <li>
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }} - {{ post.date | date: "%Y-%m-%d" }}
-      </a>
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
     </li>
   {% endfor %}
 </ul>
