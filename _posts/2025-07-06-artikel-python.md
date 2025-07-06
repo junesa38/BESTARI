@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Artikel Otomatis dari Python"
 date: 2025-07-06 21:44:43
 ---
