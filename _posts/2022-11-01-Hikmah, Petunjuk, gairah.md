@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Hikmah, Petunjuk, gairah
 date: 2022-11-01
 ---
