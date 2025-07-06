@@ -12,6 +12,8 @@
 
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
@@ -19,7 +21,6 @@
       background-color: #001d1a;
       color: white;
       padding: 20px;
-      margin: auto;
       max-width: 100%;
       line-height: 1.6;
     }
@@ -29,24 +30,40 @@
       text-decoration: none;
     }
 
-    nav {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      text-align: left; /* Kembali ke rata kiri */
+    a:hover {
+      text-decoration: underline;
     }
 
-    nav a {
-      margin-right: 20px; /* Jarak antar tombol */
-      margin-left: 0;   /* Pastikan tidak ada margin kiri */
-      font-weight: bold;
-      display: inline-block; /* Penting agar tetap sejajar */
+    header {
+      margin-bottom: 20px;
     }
 
     .logo {
       font-size: 2em;
       font-weight: bold;
-      font-family: 'Burgundia', sans-serif;
+      font-family: 'Burgundia', Arial, sans-serif;
       letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #001d1a;
+      padding: 10px 0;
+    }
+
+    nav a {
+      margin-right: 20px;
+      color: #3399ff;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding-top: 10px;
     }
 
     footer {
@@ -61,15 +78,11 @@
         font-size: 1.5em;
       }
 
-      nav {
-        text-align: left; /* Tetap rata kiri di mobile */
-        padding-left: 0; /* Pastikan tidak ada padding yang mengganggu */
-      }
       nav a {
-        display: inline-block; /* Tetap sejajar di mobile */
-        margin-right: 15px; /* Jarak antar tombol di mobile */
-        margin-bottom: 5px; /* Jika tombol wrap ke bawah */
-        white-space: nowrap; /* Mencegah teks tombol terpotong */
+        display: inline-block;
+        margin-right: 15px;
+        margin-bottom: 5px;
+        white-space: nowrap;
       }
 
       body {
@@ -77,25 +90,18 @@
       }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYDNQB90MH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PYDNQB90MH');
-</script>
 </head>
+
 <body>
   <header>
     <div class="logo">BESTARI</div>
     <nav>
-  <a href="{{ "/" | relative_url }}">Home</a>
-  <a href="{{ "/projects/" | relative_url }}">Projects</a> 
-  <a href="{{ "/blog/" | relative_url }}">Blog</a> 
-</nav>
-
+      <a href="{{ "/" | relative_url }}">Home</a>
+      <a href="{{ "/tools/" | relative_url }}">Tools</a>
+      <a href="{{ "/trading/" | relative_url }}">Trading</a>
+      <a href="{{ "/loker/" | relative_url }}">Loker</a>
+      <a href="{{ "/blog/" | relative_url }}">Blog</a>
+    </nav>
     <hr>
   </header>
 
@@ -104,10 +110,9 @@
   </main>
 
   <footer>
-  <hr>
-  <a href="mailto:junesa38@gmail.com">Subscribe via e-mail</a> or just say hello  
-  <br>Powered by GitHub
-</footer>
-
+    <hr>
+    <a href="mailto:junesa38@gmail.com">Subscribe via e-mail</a> or just say hello  
+    <br>Powered by GitHub
+  </footer>
 </body>
 </html>
