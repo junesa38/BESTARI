@@ -13,7 +13,11 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
 
 ---
 
-## My Most Recent Posts
+## Most Recent Post
+
+{% if site.posts == empty %}
+⚠️ Belum ada post yang terdeteksi di folder _posts/
+{% endif %}
 
 <ul>
   {% assign sorted_recent_items = site.posts | sort: "date" | reverse %}
@@ -23,5 +27,4 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
     </li>
   {% endfor %}
 </ul>
-
 
