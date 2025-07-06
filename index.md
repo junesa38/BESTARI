@@ -19,8 +19,9 @@ I currently live in Jakarta, a vibrant and complex city full of contrast and ins
 ⚠️ Belum ada post yang terdeteksi di folder _posts/
 {% endif %}
 
-<ul>
-  {% assign sorted_recent_items = site.posts | sort: "date" | reverse %}
+<ul style="padding-left: 20px;">
+  {% assign all_recent_items = site.posts | concat: site.projects %}
+  {% assign sorted_recent_items = all_recent_items | sort: "date" | reverse %}
   {% for item in sorted_recent_items limit:3 %}
     <li>
       <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
