@@ -11,9 +11,10 @@ plugins:
   - jekyll-feed
 
 collections:
-  projects:
+  tools:
     output: true
-    permalink: /projects/:name/
+    permalink: /tools/:name/
 
 include:
   - _posts
+
