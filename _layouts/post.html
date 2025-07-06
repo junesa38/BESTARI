@@ -2,28 +2,169 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ page.title }}</title>
   <style>
+    @font-face {
+      font-family: 'Burgundia';
+      src: url('{{ "/assets/fonts/Burgundia_PERSONAL_USE_ONLY.otf" | relative_url }}') format('opentype');
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: auto;
-      padding: 40px;
-      background-color: #001d1a;
+      background-color: #001d1a; /* Warna background yang Anda berikan */
       color: white;
+      padding: 20px;
+      margin: auto;
+      max-width: 100%;
+      line-height: 1.6;
     }
+
     a {
-      color: #3399ff;
+      color: #3399ff; /* Warna link default Anda */
+      text-decoration: none;
+    }
+
+    /* Styling untuk Navbar Baru */
+    header {
+      background-color: #003722; /* Warna background navbar yang Anda inginkan */
+      padding: 10px 20px; /* Padding untuk header */
+      margin-bottom: 20px;
+      display: flex; /* Menggunakan flexbox untuk layout horizontal */
+      align-items: center; /* Rata tengah vertikal */
+      justify-content: space-between; /* Logo di kiri, nav di kanan */
+      flex-wrap: wrap; /* Agar responsif di layar kecil */
+    }
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+      font-family: 'Burgundia', sans-serif;
+      letter-spacing: 1px;
+      color: white; /* Pastikan logo berwarna putih */
+      margin-right: 20px; /* Jarak antara logo dan nav */
+    }
+
+    nav {
+      margin-top: 0; /* Hapus margin top lama */
+      margin-bottom: 0; /* Hapus margin bottom lama */
+      text-align: right; /* Rata kanan untuk nav */
+      flex-grow: 1; /* Agar nav mengisi sisa ruang */
+    }
+
+    nav a {
+      margin-right: 20px; /* Jarak antar tombol */
+      margin-left: 0;
+      font-weight: bold;
+      display: inline-block;
+      color: #FFFFFF; /* Warna teks tombol: Putih murni */
+      padding: 5px 0; /* Padding vertikal untuk area klik */
+    }
+
+    nav a:last-child {
+      margin-right: 0; /* Hapus margin kanan pada tombol terakhir */
+    }
+
+    nav a:hover {
+      color: #CCCCCC; /* Warna teks saat hover: Abu-abu terang */
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background: #333; /* Warna garis pemisah */
+      margin: 20px 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.8em;
+      text-align: center;
+      color: #ccc;
+    }
+
+    /* Perbaikan untuk konten utama (termasuk artikel blog) */
+    main {
+      max-width: 960px; /* Batasi lebar konten utama agar tidak terlalu lebar */
+      margin: 0 auto; /* Pusatkan konten utama */
+      padding: 0 20px; /* Padding horizontal */
+    }
+
+    .post-content {
+      text-align: left; /* Pastikan teks rata kiri */
+      // Jika Anda ingin mengatur lebar spesifik untuk konten postingan, Anda bisa menambahkan ini:
+      // max-width: 700px;
+      // margin: 0 auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      header {
+        flex-direction: column; /* Tata letak vertikal di mobile */
+        align-items: flex-start; /* Rata kiri di mobile */
+        padding: 10px;
+      }
+      .logo {
+        font-size: 1.5em;
+        margin-bottom: 10px; /* Jarak bawah logo di mobile */
+        margin-right: 0;
+      }
+      nav {
+        width: 100%; /* Navigasi mengisi lebar penuh */
+        text-align: left; /* Rata kiri untuk menu di mobile */
+      }
+      nav a {
+        display: block; /* Tombol menjadi blok penuh di mobile */
+        margin-right: 0;
+        margin-bottom: 5px; /* Jarak antar tombol di mobile */
+        padding: 8px 0; /* Padding lebih besar untuk area klik */
+        border-bottom: 1px solid #005C33; /* Separator */
+      }
+      nav a:last-child {
+        border-bottom: none; /* Hapus border di tombol terakhir */
+      }
+      body {
+        padding: 15px;
+      }
+      main {
+        padding: 0 15px; /* Sesuaikan padding di mobile */
+      }
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PYDNQB90MH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PYDNQB90MH');
+</script>
 </head>
 <body>
-  <h1>{{ page.title }}</h1>
-  <p><em>{{ page.date | date: "%d %B %Y" }}</em></p>
-  <div>
+  <header>
+    <div class="logo">BESTARI</div>
+    <nav>
+      <a href="{{ "/" | relative_url }}">🏠 Home</a>
+      <a href="{{ "/tools/" | relative_url }}">🧰 Tools</a>
+      <a href="{{ "/trading/" | relative_url }}">📊 Trading</a>
+      <a href="{{ "/loker/" | relative_url }}">📌 Loker</a>
+      <a href="{{ "/blog.html" | relative_url }}">📝 Blog</a>
+    </nav>
+  </header>
+
+  <main>
     {{ content }}
-  </div>
-  <br>
-  <a href="/blog/">← Back to Blog</a>
+  </main>
+
+  <footer>
+    <hr>
+    <a href="mailto:junesa38@gmail.com">Subscribe via e-mail</a> or just say hello
+    <br>Powered by GitHub
+  </footer>
+
 </body>
 </html>
