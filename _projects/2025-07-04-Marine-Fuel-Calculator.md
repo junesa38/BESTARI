@@ -3,9 +3,7 @@ layout: default
 title: "Marine Fuel Calculator"
 date: 2025-07-04 10:00:00 +0700
 categories:
-  - Tools
   - Maritim
-  - Kalkulator
 tags:
   - bahan bakar
   - kapal
