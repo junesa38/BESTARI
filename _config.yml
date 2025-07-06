@@ -4,7 +4,7 @@ description: >-
   Ini adalah situs pribadi Asa Putra — profesional pelaut dan pembuat proyek kreatif.
 
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 
 theme: minima
 plugins:
@@ -17,4 +17,3 @@ collections:
 
 include:
   - _posts
-
