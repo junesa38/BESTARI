@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "The Sorrow of a Loser Doesn't Deserve Sympathy",
+      "date": "2025-01-15",
+      "slug": "sorrow-of-loser",
+      "excerpt": "Kita hidup dalam dunia yang sering mengasihani kekalahan, bukan karena mereka layak dikasihani, tapi karena itu cara paling mudah untuk merasa lebih baik dari mereka.",
+      "tags": ["motivasi", "mental", "kehidupan"],
+      "author": "Asa Putra"
+    },
+    {
+      "title": "Hikmah, Petunjuk, Gairah",
+      "date": "2025-01-10",
+      "slug": "hikmah-petunjuk-gairah",
+      "excerpt": "Tahun 2022 adalah masa yang sulit dalam hidup saya. Tapi di balik semua keterpurukan itu, saya menemukan sesuatu yang lebih dalam.",
+      "tags": ["refleksi", "kehidupan", "karir"],
+      "author": "Asa Putra"
+    },
+    {
+      "title": "Navigating Life's Storms",
+      "date": "2025-01-05",
+      "slug": "navigating-life-storms",
+      "excerpt": "Lessons learned from years at sea and how they apply to life on land. Sometimes the biggest storms teach us the most valuable lessons.",
+      "tags": ["pelaut", "kehidupan", "pelajaran"],
+      "author": "Asa Putra"
+    }
+  ]
+}

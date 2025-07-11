@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS - Content Management System | BESTARI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #1d4ed8;
+        }
+
+        .header h1 {
+            color: #041810;
+            font-size: 28px;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: 'Merriweather', serif;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="date"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1d4ed8;
+            box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.1);
+        }
+
+        textarea {
+            min-height: 200px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .btn {
+            background-color: #1d4ed8;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Merriweather', serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #1e40af;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: #6b7280;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4b5563;
+        }
+
+        .preview {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #f8fafc;
+            border-radius: 8px;
+            border-left: 4px solid #1d4ed8;
+        }
+
+        .preview h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-size: 16px;
+        }
+
+        .preview-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .preview-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .preview-meta {
+            color: #6b7280;
+            font-size: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .preview-text {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .output {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #1f2937;
+            color: #f9fafb;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .success {
+            background-color: #10b981;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .error {
+            background-color: #ef4444;
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        .instructions {
+            background-color: #eff6ff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #1d4ed8;
+        }
+
+        .instructions h3 {
+            color: #1d4ed8;
+            margin-bottom: 1rem;
+            font-size: 16px;
+        }
+
+        .instructions ul {
+            color: #374151;
+            font-size: 13px;
+            padding-left: 1.5rem;
+        }
+
+        .instructions li {
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+                margin: 10px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                width: 100%;
+                margin-bottom: 0.5rem;
+                margin-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Content Management System</h1>
+            <p>Buat blog post atau tool baru untuk website BESTARI</p>
+        </div>
+
+        <div class="instructions">
+            <h3>Cara Penggunaan:</h3>
+            <ul>
+                <li>Isi form di bawah untuk membuat konten baru</li>
+                <li>Pilih tipe konten: Blog Post atau Tool</li>
+                <li>Klik "Generate" untuk membuat file</li>
+                <li>Copy kode yang dihasilkan dan simpan sebagai file .html atau .json</li>
+                <li>Upload file ke folder yang sesuai di GitHub repository</li>
+            </ul>
+        </div>
+
+        <form id="cmsForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contentType">Tipe Konten:</label>
+                    <select id="contentType" required>
+                        <option value="">Pilih Tipe</option>
+                        <option value="blog">Blog Post</option>
+                        <option value="tool">Tool</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="publishDate">Tanggal Publish:</label>
+                    <input type="date" id="publishDate" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Judul:</label>
+                <input type="text" id="title" placeholder="Masukkan judul konten" required>
+            </div>
+
+            <div class="form-group">
+                <label for="slug">Slug (URL):</label>
+                <input type="text" id="slug" placeholder="url-friendly-slug" required>
+            </div>
+
+            <div class="form-group">
+                <label for="excerpt">Excerpt/Deskripsi Singkat:</label>
+                <textarea id="excerpt" placeholder="Deskripsi singkat untuk preview" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="content">Konten:</label>
+                <textarea id="content" placeholder="Tulis konten lengkap di sini..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tags">Tags (pisahkan dengan koma):</label>
+                <input type="text" id="tags" placeholder="tag1, tag2, tag3">
+            </div>
+
+            <div class="form-group" id="toolUrlGroup" style="display: none;">
+                <label for="toolUrl">URL Tool (untuk tipe Tool):</label>
+                <input type="text" id="toolUrl" placeholder="https://example.com">
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn" onclick="generatePreview()">Preview</button>
+                <button type="button" class="btn" onclick="generateContent()">Generate</button>
+                <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+            </div>
+        </form>
+
+        <div id="preview" class="preview" style="display: none;">
+            <h3>Preview:</h3>
+            <div class="preview-content">
+                <div class="preview-title" id="previewTitle"></div>
+                <div class="preview-meta" id="previewMeta"></div>
+                <div class="preview-text" id="previewText"></div>
+            </div>
+        </div>
+
+        <div id="output" class="output" style="display: none;"></div>
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // Set today's date as default
+        document.getElementById('publishDate').valueAsDate = new Date();
+
+        // Show/hide tool URL field based on content type
+        document.getElementById('contentType').addEventListener('change', function() {
+            const toolUrlGroup = document.getElementById('toolUrlGroup');
+            if (this.value === 'tool') {
+                toolUrlGroup.style.display = 'block';
+            } else {
+                toolUrlGroup.style.display = 'none';
+            }
+        });
+
+        // Auto-generate slug from title
+        document.getElementById('title').addEventListener('input', function() {
+            const slug = this.value
+                .toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .trim('-');
+            document.getElementById('slug').value = slug;
+        });
+
+        function generatePreview() {
+            const title = document.getElementById('title').value;
+            const publishDate = document.getElementById('publishDate').value;
+            const excerpt = document.getElementById('excerpt').value;
+            const content = document.getElementById('content').value;
+
+            if (!title || !publishDate || !excerpt) {
+                showMessage('Harap isi minimal judul, tanggal, dan excerpt untuk preview', 'error');
+                return;
+            }
+
+            document.getElementById('previewTitle').textContent = title;
+            document.getElementById('previewMeta').textContent = `Dipublikasikan pada ${formatDate(publishDate)} oleh Asa Putra`;
+            document.getElementById('previewText').innerHTML = excerpt + (content ? '<br><br>' + content.substring(0, 200) + '...' : '');
+            
+            document.getElementById('preview').style.display = 'block';
+        }
+
+        function generateContent() {
+            const contentType = document.getElementById('contentType').value;
+            const title = document.getElementById('title').value;
+            const slug = document.getElementById('slug').value;
+            const publishDate = document.getElementById('publishDate').value;
+            const excerpt = document.getElementById('excerpt').value;
+            const content = document.getElementById('content').value;
+            const tags = document.getElementById('tags').value.split(',').map(tag => tag.trim()).filter(tag => tag);
+            const toolUrl = document.getElementById('toolUrl').value;
+
+            if (!contentType || !title || !slug || !publishDate || !excerpt || !content) {
+                showMessage('Harap isi semua field yang wajib', 'error');
+                return;
+            }
+
+            let generatedContent = '';
+
+            if (contentType === 'blog') {
+                generatedContent = generateBlogPost(title, slug, publishDate, excerpt, content, tags);
+            } else if (contentType === 'tool') {
+                generatedContent = generateToolPost(title, slug, publishDate, excerpt, content, tags, toolUrl);
+            }
+
+            document.getElementById('output').textContent = generatedContent;
+            document.getElementById('output').style.display = 'block';
+            
+            showMessage(`${contentType === 'blog' ? 'Blog post' : 'Tool'} berhasil di-generate! Copy kode di bawah dan simpan sebagai file.`, 'success');
+        }
+
+        function generateBlogPost(title, slug, publishDate, excerpt, content, tags) {
+            return `<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} | BESTARI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        .article-header { margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid #e5e7eb; }
+        .article-title { font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 1rem; line-height: 1.3; }
+        .article-meta { color: #6b7280; font-size: 13px; margin-bottom: 1rem; }
+        .article-content { font-size: 15px; line-height: 1.8; color: #374151; }
+        .article-content p { margin-bottom: 1.5rem; }
+        .back-link { display: inline-block; margin-bottom: 2rem; color: #1d4ed8; text-decoration: none; font-size: 14px; }
+        .back-link:hover { text-decoration: underline; }
+        .tags { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; }
+        .tag { display: inline-block; background-color: #eff6ff; color: #1d4ed8; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 12px; margin-right: 0.5rem; margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">BESTARI</div>
+            <nav>
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../tools.html" class="nav-link">Tools</a>
+                <a href="../../blog.html" class="nav-link active">Blog</a>
+                <a href="../../about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../blog.html" class="back-link">← Kembali ke Blog</a>
+        
+        <article>
+            <header class="article-header">
+                <h1 class="article-title">${title}</h1>
+                <div class="article-meta">
+                    Dipublikasikan pada ${formatDate(publishDate)} oleh Asa Putra
+                </div>
+            </header>
+            
+            <div class="article-content">
+                ${content.split('\n').map(p => p.trim() ? `<p>${p}</p>` : '').join('\n                ')}
+            </div>
+            
+            ${tags.length > 0 ? `<div class="tags">
+                ${tags.map(tag => `<span class="tag">${tag}</span>`).join('\n                ')}
+            </div>` : ''}
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>&copy; 2025 Asa Putra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+---
+
+JUGA UPDATE FILE JSON:
+Tambahkan entry berikut ke posts/blog-index.json:
+
+{
+  "title": "${title}",
+  "date": "${publishDate}",
+  "slug": "${slug}",
+  "excerpt": "${excerpt}",
+  "tags": [${tags.map(tag => `"${tag}"`).join(', ')}],
+  "author": "Asa Putra"
+}`;
+        }
+
+        function generateToolPost(title, slug, publishDate, excerpt, content, tags, toolUrl) {
+            return `{
+  "title": "${title}",
+  "date": "${publishDate}",
+  "slug": "${slug}",
+  "description": "${excerpt}",
+  "category": "Tools",
+  "tags": [${tags.map(tag => `"${tag}"`).join(', ')}],
+  "url": "${toolUrl || '#'}"
+}
+
+---
+
+JUGA BUAT FILE HTML:
+Simpan sebagai posts/tools/${slug}.html:
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${title} | BESTARI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">BESTARI</div>
+            <nav>
+                <a href="../../index.html" class="nav-link">Home</a>
+                <a href="../../tools.html" class="nav-link active">Tools</a>
+                <a href="../../blog.html" class="nav-link">Blog</a>
+                <a href="../../about.html" class="nav-link">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <a href="../../tools.html" class="back-link">← Kembali ke Tools</a>
+        
+        <article>
+            <h1>${title}</h1>
+            <p>${excerpt}</p>
+            
+            <div class="tool-content">
+                ${content.split('\n').map(p => p.trim() ? `<p>${p}</p>` : '').join('\n                ')}
+            </div>
+            
+            ${toolUrl ? `<div class="tool-link">
+                <a href="${toolUrl}" target="_blank" class="btn btn-primary">Buka Tool</a>
+            </div>` : ''}
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p>&copy; 2025 Asa Putra. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>`;
+        }
+
+        function clearForm() {
+            document.getElementById('cmsForm').reset();
+            document.getElementById('publishDate').valueAsDate = new Date();
+            document.getElementById('preview').style.display = 'none';
+            document.getElementById('output').style.display = 'none';
+            document.getElementById('message').innerHTML = '';
+            document.getElementById('toolUrlGroup').style.display = 'none';
+        }
+
+        function showMessage(message, type) {
+            const messageDiv = document.getElementById('message');
+            messageDiv.innerHTML = `<div class="${type}">${message}</div>`;
+            setTimeout(() => {
+                messageDiv.innerHTML = '';
+            }, 5000);
+        }
+
+        function formatDate(dateString) {
+            const date = new Date(dateString);
+            return date.toLocaleDateString('id-ID', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "tools": [
+    {
+      "title": "Marine Fuel Calculator",
+      "date": "2025-01-12",
+      "slug": "marine-fuel-calculator",
+      "description": "Calculate fuel consumption for marine vessels with precision. Perfect for voyage planning and fuel management.",
+      "category": "Maritime",
+      "tags": ["kapal", "bahan bakar", "maritim", "kalkulator"],
+      "url": "https://gentle-dragon-4e200c.netlify.app/"
+    },
+    {
+      "title": "Concrete Volume Calculator",
+      "date": "2025-01-08",
+      "slug": "concrete-calculator",
+      "description": "Estimate concrete requirements for construction projects. Calculate cement, sand, gravel, and water needs.",
+      "category": "Construction",
+      "tags": ["konstruksi", "beton", "material", "kalkulator"],
+      "url": "https://lucky-croquembouche-ae6327.netlify.app/"
+    },
+    {
+      "title": "Buy vs Rent House Calculator",
+      "date": "2025-01-03",
+      "slug": "buy-rent-calculator",
+      "description": "Compare the financial impact of buying versus renting property in Indonesia. Make informed housing decisions.",
+      "category": "Finance",
+      "tags": ["properti", "finansial", "rumah", "investasi"],
+      "url": "https://tiny-meerkat-d745b2.netlify.app/"
+    }
+  ]
+}
